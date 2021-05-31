@@ -80,7 +80,7 @@ class BasicJsonDocument : AllocatorOwner<TAllocator>, public JsonDocument {
     set(src);
   }
 
-  ~BasicJsonDocument() {
+  ~BasicJsonDocument() override {
     freePool();
   }
 
