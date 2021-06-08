@@ -141,6 +141,7 @@ set(sources
 )
 
 set(dependencies
+    arduino-esp32
 )
 
 idf_component_register(
