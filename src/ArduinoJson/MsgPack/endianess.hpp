@@ -11,6 +11,7 @@ namespace ARDUINOJSON_NAMESPACE {
 
 #if ARDUINOJSON_LITTLE_ENDIAN
 inline void fixEndianess(uint8_t *p, integral_constant<size_t, 8>) {
+  using namespace utility;
   swap(p[0], p[7]);
   swap(p[1], p[6]);
   swap(p[2], p[5]);
@@ -18,11 +19,13 @@ inline void fixEndianess(uint8_t *p, integral_constant<size_t, 8>) {
 }
 
 inline void fixEndianess(uint8_t *p, integral_constant<size_t, 4>) {
+  using namespace utility;
   swap(p[0], p[3]);
   swap(p[1], p[2]);
 }
 
 inline void fixEndianess(uint8_t *p, integral_constant<size_t, 2>) {
+  using namespace utility;
   swap(p[0], p[1]);
 }
 

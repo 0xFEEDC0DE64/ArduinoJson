@@ -7,11 +7,13 @@
 #include "type_traits.hpp"
 
 namespace ARDUINOJSON_NAMESPACE {
+namespace utility {
 template <typename T>
 inline void swap(T& a, T& b) {
   T t(a);
   a = b;
   b = t;
+}
 }
 
 #if ARDUINOJSON_HAS_RVALUE_REFERENCES
