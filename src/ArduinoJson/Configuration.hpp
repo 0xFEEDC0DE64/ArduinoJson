@@ -133,7 +133,7 @@
 
 #endif  // ARDUINOJSON_EMBEDDED_MODE
 
-#ifdef ARDUINO
+#if defined(ARDUINO) && !defined(ARDUINOJSON_NO_ARDUINO)
 
 #include <Arduino.h>
 
