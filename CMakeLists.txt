@@ -154,6 +154,8 @@ idf_component_register(
         ${dependencies}
 )
 
+set_property(TARGET ${COMPONENT_LIB} PROPERTY CXX_STANDARD 23)
+
 target_compile_options(${COMPONENT_TARGET}
     PUBLIC
         -DARDUINOJSON_USE_LONG_LONG
