@@ -37,7 +37,7 @@ class MsgPackSerializer : public Visitor<size_t> {
   ARDUINOJSON_NO_SANITIZE("float-cast-overflow")
   typename enable_if<sizeof(T) == 8, size_t>::type visitFloat(T value64) {
     float value32 = float(value64);
-    if (value32 == value64)
+    if (double(value32) == value64)
       return visitFloat(value32);
     writeByte(0xCB);
     writeInteger(value64);
